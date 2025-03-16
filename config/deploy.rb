@@ -10,12 +10,15 @@ set :bundle_without, %w{test}.join(':')
 set :branch, 'main' # 追加
 
 set :rbenv_version, '3.3.0'
-set :default_env, { 
-      'BUNDLE_FORCE_RUBY_PLATFORM' => '1',# プリコンパイルエラーのため、追記
-      PATH: "$HOME/.nvm/versions/node/v14.21.3/bin:$HOME/.rbenv/bin:$PATH",# Node,yarnの読込エラー？？
-      NODE_ENV: "production",
-      YARN_PATH: "$HOME/.nvm/versions/node/v14.21.3/bin/yarn"
-} 
+set :default_env, { 'BUNDLE_FORCE_RUBY_PLATFORM' => '1' } # プリコンパイルエラーのため、追記
+
+
+# set :default_env, { 
+#       'BUNDLE_FORCE_RUBY_PLATFORM' => '1',# プリコンパイルエラーのため、追記
+#       PATH: "$HOME/.nvm/versions/node/v14.21.3/bin:$HOME/.rbenv/bin:$PATH",# Node,yarnの読込エラー？？
+#       NODE_ENV: "production",
+#       YARN_PATH: "$HOME/.nvm/versions/node/v14.21.3/bin/yarn"
+# } 
 append :linked_files, 'config/secrets.yml'   # 追記
 
 
