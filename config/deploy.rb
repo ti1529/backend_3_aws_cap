@@ -10,6 +10,7 @@ set :bundle_without, %w{test}.join(':')
 set :branch, 'main' # 追加
 
 set :rbenv_version, '3.0.1'
+set :default_env, { 'BUNDLE_FORCE_RUBY_PLATFORM' => '1' } # プリコンパイルエラーのため、追記
 
 
 # Default branch is :master
